@@ -1,0 +1,27 @@
+{
+	"name": "ds_LatestFile_Getmeta1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sourceadls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CopySizeBasedFiles"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "source",
+				"fileSystem": "sourceconatinerb6"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

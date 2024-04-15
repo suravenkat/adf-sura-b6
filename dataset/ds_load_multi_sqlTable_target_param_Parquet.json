@@ -1,0 +1,29 @@
+{
+	"name": "ds_load_multi_sqlTable_target_param_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sourceadls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Table_FolderName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().Table_FolderName",
+					"type": "Expression"
+				},
+				"fileSystem": "sourceconatinerb6"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
