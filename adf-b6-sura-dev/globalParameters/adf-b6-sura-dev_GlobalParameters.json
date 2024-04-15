@@ -1,0 +1,10 @@
+{
+	"container": {
+		"type": "string",
+		"value": "sourceconatinerb6"
+	},
+	"targetpath": {
+		"type": "string",
+		"value": "target"
+	}
+}
