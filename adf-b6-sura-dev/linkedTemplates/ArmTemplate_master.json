@@ -19,13 +19,26 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_sourceadls'"
 		},
+		"ls_sql_systemIdentity_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sql_systemIdentity'",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=surasqlserverdev.database.windows.net;Initial Catalog=surasqldev"
+		},
 		"ls_target_sqldb_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_target_sqldb'"
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://adfb6.vault.azure.net/"
+		},
 		"ls_sourceadls_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevb6.dfs.core.windows.net/"
+		},
+		"ls_sql_keyvault_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "adfb6sqlSecretName"
 		},
 		"TumblingWindow_Trigger_properties_pipeline_parameters_startdate": {
 			"type": "string",
@@ -71,8 +84,14 @@
 					"ls_sourceadls_accountKey": {
 						"value": "[parameters('ls_sourceadls_accountKey')]"
 					},
+					"ls_sql_systemIdentity_connectionString": {
+						"value": "[parameters('ls_sql_systemIdentity_connectionString')]"
+					},
 					"ls_target_sqldb_connectionString": {
 						"value": "[parameters('ls_target_sqldb_connectionString')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
 					"ls_sourceadls_properties_typeProperties_url": {
 						"value": "[parameters('ls_sourceadls_properties_typeProperties_url')]"
@@ -134,6 +153,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_sql_keyvault_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('ls_sql_keyvault_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},

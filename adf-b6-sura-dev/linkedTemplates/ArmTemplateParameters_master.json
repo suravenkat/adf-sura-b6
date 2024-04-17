@@ -14,11 +14,20 @@
 		"ls_sourceadls_accountKey": {
 			"value": ""
 		},
+		"ls_sql_systemIdentity_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=surasqlserverdev.database.windows.net;Initial Catalog=surasqldev"
+		},
 		"ls_target_sqldb_connectionString": {
 			"value": ""
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://adfb6.vault.azure.net/"
+		},
 		"ls_sourceadls_properties_typeProperties_url": {
 			"value": "https://adlsdevb6.dfs.core.windows.net/"
+		},
+		"ls_sql_keyvault_properties_typeProperties_connectionString_secretName": {
+			"value": "adfb6sqlSecretName"
 		},
 		"TumblingWindow_Trigger_properties_pipeline_parameters_startdate": {
 			"value": "@trigger().outputs.windowStartTime"
