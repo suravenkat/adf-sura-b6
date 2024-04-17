@@ -1,0 +1,16 @@
+{
+	"name": "ds_sql_dataflow",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_sqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employees"
+		}
+	}
+}

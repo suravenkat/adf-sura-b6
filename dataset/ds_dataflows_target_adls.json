@@ -1,0 +1,23 @@
+{
+	"name": "ds_dataflows_target_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sourceadls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "target/dataflows",
+				"fileSystem": "sourceconatinerb6"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
